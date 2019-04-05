@@ -18,7 +18,12 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      ActionCable.server.broadcast("location_one_feed_channel", @post)
+      channel = Location.find_by(id:params[:location_id])
+      if channel.id == 1
+        ActionCable.server.broadcast("location_one_feed_channel", @post)
+      elsif channel.id == 2
+        ActionCable.server.broadcast("location_two_feed_channel", @post)
+      end
       render json: @post, status: :created, location: @post
     else
       render json: @post.errors, status: :unprocessable_entity

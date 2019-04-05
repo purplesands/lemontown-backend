@@ -24,7 +24,7 @@ class FollowingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update following" do
-    patch following_url(@following), params: { following: { friend_id: @following.friend_id, user_id: @following.user_id } }, as: :json
+    patch following_url(@following), params: { following: { followed_user_id: @following.followed_user_id, user_id: @following.user_id } }, as: :json
     assert_response 200
   end
 

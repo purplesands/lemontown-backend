@@ -46,6 +46,6 @@ class FollowingsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def following_params
-      params.require(:following).permit(:user_id, :friend_id)
+      params.require(:following).permit(:user_id, :followed_user_id)
     end
 end
