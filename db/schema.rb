@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_08_151927) do
+ActiveRecord::Schema.define(version: 2019_04_08_191230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "days", force: :cascade do |t|
+    t.string "word1"
+    t.string "word2"
+    t.string "word3"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "date"
+    t.index ["date"], name: "index_days_on_date", unique: true
+  end
 
   create_table "entries", force: :cascade do |t|
     t.string "content"
@@ -62,6 +72,13 @@ ActiveRecord::Schema.define(version: 2019_04_08_151927) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "words", force: :cascade do |t|
+    t.string "word"
+    t.string "definition"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

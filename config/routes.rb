@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :days
   resources :followings
   resources :locations
   resources :entry_comments
