@@ -5,4 +5,9 @@ class EntrySerializer < ActiveModel::Serializer
    return  object.created_at.strftime("%I:%M %p ~ %m.%d.%Y")
   end
 
+  def user
+    ActiveModel::SerializableResource.new(object.user,  each_serializer: UserSerializer)
+  end
+
+
 end

@@ -15,7 +15,11 @@ class FollowingsController < ApplicationController
 
   # POST /followings
   def create
-    @following = Following.new(following_params)
+    if Following.exists?(user_id:params[:user_id],followed_user_id:params[:followed_user_id])
+      render json: @following
+      else
+      @following = Following.new(following_params)
+    end
 
     if @following.save
       render json: @following, status: :created, location: @following
