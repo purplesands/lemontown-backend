@@ -36,3 +36,5 @@ Following.create(user_id:2 , followed_user_id:1)
 Following.create(user_id:2 , followed_user_id:3)
 Following.create(user_id:4 , followed_user_id:1)
 Following.create(user_id:4 , followed_user_id:2)
+
+Day.create(word1:'beans' ,word2:'tricycle', word3:'truck', date:Date.new(2001,2,3) )
