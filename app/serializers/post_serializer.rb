@@ -1,5 +1,5 @@
 class PostSerializer < ActiveModel::Serializer
-  attributes :id, :content, :user_id, :location_id, :location, :user, :date, :is_image, :post_comments
+  attributes :id, :content, :user_id, :location_id, :location, :user, :date, :is_image, :post_comments, :day, :day_id
 
   def date
    return  object.created_at.strftime("%I:%M %p ~ %m.%d.%Y")

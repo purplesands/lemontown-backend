@@ -9,17 +9,20 @@
 Location.create(name:"lemon town")
 Location.create(name:"clearing")
 
+Day.create(word1:'beans' ,word2:'tricycle', word3:'truck', date:Date.new(2001,2,3) )
+
+
 User.create(username:"cool guy")
 User.create(username:"dumb guy")
 User.create(username:"fun guy")
 User.create(username:"weird guy")
 
-Post.create(content: "ooerreo", user_id:1, location_id:2, is_image:false)
-Post.create(content: "wee we wewewe wewe", user_id:1, location_id:1, is_image:false)
-Post.create(content: "hoooookok", user_id:2, location_id:1, is_image:false)
-Post.create(content: "weowkoek", user_id:2, location_id:2, is_image:false)
-Post.create(content: "RA", user_id:3, location_id:2, is_image:false)
-Post.create(content: "geerj", user_id:3, location_id:1, is_image:false)
+Post.create(content: "ooerreo", user_id:1, location_id:2, is_image:false, day_id:1)
+Post.create(content: "wee we wewewe wewe", user_id:1, location_id:1, is_image:false, day_id:1)
+Post.create(content: "hoooookok", user_id:2, location_id:1, is_image:false, day_id:1)
+Post.create(content: "weowkoek", user_id:2, location_id:2, is_image:false, day_id:1)
+Post.create(content: "RA", user_id:3, location_id:2, is_image:false, day_id:1)
+Post.create(content: "geerj", user_id:3, location_id:1, is_image:false, day_id:1)
 
 
 Entry.create(content: "an entry", user_id:1)
@@ -36,5 +39,3 @@ Following.create(user_id:2 , followed_user_id:1)
 Following.create(user_id:2 , followed_user_id:3)
 Following.create(user_id:4 , followed_user_id:1)
 Following.create(user_id:4 , followed_user_id:2)
-
-Day.create(word1:'beans' ,word2:'tricycle', word3:'truck', date:Date.new(2001,2,3) )
