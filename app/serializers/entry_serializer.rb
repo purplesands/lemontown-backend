@@ -1,5 +1,5 @@
 class EntrySerializer < ActiveModel::Serializer
-  attributes :id, :content, :user_id, :user, :date, :created_at
+  attributes :id, :content, :user_id, :user, :date, :created_at, :entry_comments
 
   def date
    return  object.created_at.strftime("%I:%M %p ~ %m.%d.%Y")
