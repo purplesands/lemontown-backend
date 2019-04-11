@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  validates :username, uniqueness: true
+  has_secure_password
 
   has_many :posts
   has_many :post_comments, through: :posts
@@ -10,7 +12,7 @@ class User < ApplicationRecord
   has_many :follower_users, through: :followers, source: :user
   accepts_nested_attributes_for :posts
 
-  has_one_attached :avatar
+  # has_one_attached :avatar
 
 
 end
