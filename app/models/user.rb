@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+
   has_many :posts
   has_many :post_comments, through: :posts
   has_many :entries
@@ -8,5 +9,8 @@ class User < ApplicationRecord
   has_many :followers, foreign_key: :followed_user_id, class_name: 'Following'
   has_many :follower_users, through: :followers, source: :user
   accepts_nested_attributes_for :posts
+
+  has_one_attached :avatar
+
 
 end

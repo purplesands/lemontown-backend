@@ -22,6 +22,16 @@ module ZoneBackend
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
     config.time_zone = 'Eastern Time (US & Canada)'
+    # config.paperclip_defaults = {
+    #    :storage => :s3,
+    #    :s3_credentials => {
+    #       :bucket => "lemon-town",
+    #       :access_key_id => "AKIAJ775JCBNKKIFO3LA",
+    #       :secret_access_key => "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"
+    #       },
+    #        :s3_region => "us-east-2"
+    #       }
+
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

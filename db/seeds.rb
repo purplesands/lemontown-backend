@@ -12,10 +12,10 @@ Location.create(name:"clearing")
 Day.create(word1:'beans' ,word2:'tricycle', word3:'truck', date:Date.new(2001,2,3) )
 
 
-User.create(username:"cool guy", avatar:"https://s3.amazonaws.com/ganbreederpublic/imgs/6c61a58f63e6235e15882de5.jpeg")
-User.create(username:"dumb guy", avatar:"https://s3.amazonaws.com/ganbreederpublic/imgs/6c61a58f63e6235e15882de5.jpeg")
-User.create(username:"fun guy", avatar:"https://s3.amazonaws.com/ganbreederpublic/imgs/6c61a58f63e6235e15882de5.jpeg")
-User.create(username:"weird guy", avatar:"https://s3.amazonaws.com/ganbreederpublic/imgs/6c61a58f63e6235e15882de5.jpeg")
+User.create(username:"cool guy")
+User.create(username:"dumb guy")
+User.create(username:"fun guy")
+User.create(username:"weird guy")
 
 Post.create(content: "ooerreo", user_id:1, location_id:2, is_image:false, day_id:1)
 Post.create(content: "wee we wewewe wewe", user_id:1, location_id:1, is_image:false, day_id:1)

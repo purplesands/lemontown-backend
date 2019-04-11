@@ -16,8 +16,10 @@
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+/config/locales/storage.yml
 
 .byebug_history
+.env
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
