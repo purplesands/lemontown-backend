@@ -20,8 +20,6 @@ class DaysController < ApplicationController
     else
       @day =  Day.new(day_params)
     end
-    # @day = Day.where(created_at: Time.now.beginning_of_day.utc..Time.now.end_of_day.utc).first_or_create!
-    # @day.update_attributes(day_params)
 
     if @day.save
       render json: @day, status: :created, location: @day
@@ -52,6 +50,6 @@ class DaysController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def day_params
-      params.require(:day).permit(:word1, :word2, :word3, :date, :posts)
+      params.require(:day).permit(:word1, :word2, :word3, :date)
     end
 end

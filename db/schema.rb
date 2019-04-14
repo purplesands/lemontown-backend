@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_04_11_204047) do
     t.string "word3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "date"
+    t.string "date"
     t.index ["date"], name: "index_days_on_date", unique: true
   end
 
