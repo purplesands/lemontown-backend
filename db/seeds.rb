@@ -12,10 +12,10 @@ Location.create(name:"clearing")
 Day.create(word1:'beans' ,word2:'tricycle', word3:'truck', date:Date.new(2001,2,3) )
 
 
-User.create(username:"cool guy" , avatar:"https://i0.wp.com/franchise.californiatortilla.com/wp-content/uploads/2016/12/vegetable-icon-png-2.png?ssl=1", bio: "he he he he eh ehhihe hehe heookp")
-User.create(username:"dumb guy", avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe3x4obc9SUl4hoUzQNOX9F51LUYoPd_45oXQicNHLfJh4KhJkvw", bio: "broccolibroccoli broccoli broccoli broccoli")
-User.create(username:"fun guy", avatar: "https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/c/c3/Rockarrot.png", bio: "cool cool potato cool, cool cool cool cool")
-User.create(username:"weird guy", avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXZtuB2mCYa9CH4767AsbyPCDGU7tibXwY6d8C6hM9UcejPFTz", bio: "weewhihgejojof  hqeohgepihpiqehgpqg hqegpihqeg")
+User.create(username:"cool guy", password_digest:1, avatar:"https://i0.wp.com/franchise.californiatortilla.com/wp-content/uploads/2016/12/vegetable-icon-png-2.png?ssl=1", bio: "he he he he eh ehhihe hehe heookp")
+User.create(username:"dumb guy", password_digest:1, avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe3x4obc9SUl4hoUzQNOX9F51LUYoPd_45oXQicNHLfJh4KhJkvw", bio: "broccolibroccoli broccoli broccoli broccoli")
+User.create(username:"fun guy", password_digest:1, avatar: "https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/c/c3/Rockarrot.png", bio: "cool cool potato cool, cool cool cool cool")
+User.create(username:"weird guy", password_digest:1, avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXZtuB2mCYa9CH4767AsbyPCDGU7tibXwY6d8C6hM9UcejPFTz", bio: "weewhihgejojof  hqeohgepihpiqehgpqg hqegpihqeg")
 
 Post.create(content: "ooerreo", user_id:1, location_id:2, is_image:false, day_id:1)
 Post.create(content: "wee we wewewe wewe", user_id:1, location_id:1, is_image:false, day_id:1)
