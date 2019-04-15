@@ -5,5 +5,6 @@ class Post < ApplicationRecord
   has_many :post_comments
   accepts_nested_attributes_for :user
 
-  
+
+
 end

@@ -50,6 +50,6 @@ class DaysController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def day_params
-      params.require(:day).permit(:word1, :word2, :word3, :date)
+      params.require(:day).permit(:word1, :word2, :word3, :word4, :word5,:date)
     end
 end

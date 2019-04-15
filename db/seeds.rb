@@ -9,7 +9,7 @@
 Location.create(name:"lemon town")
 Location.create(name:"clearing")
 
-Day.create(word1:'beans' ,word2:'tricycle', word3:'truck', date:Date.new(2001,2,3) )
+Day.create(word1:'beans' ,word2:'tricycle', word3:'truck', word4:'potato', word5:"cool", date:Date.new(2001,2,3) )
 
 
 User.create(username:"cool guy", password_digest:1, avatar:"https://i0.wp.com/franchise.californiatortilla.com/wp-content/uploads/2016/12/vegetable-icon-png-2.png?ssl=1", bio: "he he he he eh ehhihe hehe heookp")
