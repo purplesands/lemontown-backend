@@ -19,7 +19,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(
       username: params[:username],
-			password: params[:password]
+			password: params[:password],
+      avatar: params[:avatar]
     )
     if @user.save
       jwt = encode_token({user_id: @user.id})

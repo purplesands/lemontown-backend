@@ -16,9 +16,10 @@ class PostCommentsController < ApplicationController
   # POST /post_comments
   def create
     @post_comment = PostComment.new(post_comment_params)
+      ActionCable.server.broadcast("location_two_feed_channel", @post_comment)
 
     if @post_comment.save
-      render json: @post_comment, status: :created, location: @post_comment
+      render json: @post_comment, status: :created
     else
       render json: @post_comment.errors, status: :unprocessable_entity
     end

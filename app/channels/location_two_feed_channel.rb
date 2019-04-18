@@ -1,8 +1,6 @@
 class LocationTwoFeedChannel < ApplicationCable::Channel
   def subscribed
     stream_from "location_two_feed_channel"
-    puts "something big"
-
   end
 
   def unsubscribed
