@@ -5,7 +5,6 @@ class AuthController < ApplicationController
       # prove that the user exists in our database
       # -> lets send them a token!
       # -> the token will help us identify and validate our client
-
       jwt = encode_token({user_id: @user.id})
       render json: {user: UserSerializer.new(@user), jwt: jwt}
     else
