@@ -1,6 +1,6 @@
 Rails.application.configure do
 
-  config.action_cable.url = "ws://#{ENV['RAILS_HOST']}/cable"
+  config.action_cable.url = "ws://lemon-town-api.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['http://localhost:3000','https://localhost:3000', "http://#{ENV['RAILS_HOST']}","https://#{ENV['RAILS_HOST']}"]
 
   # Settings specified here will take precedence over those in config/application.rb.
