@@ -24,6 +24,7 @@ module ZoneBackend
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
     config.time_zone = 'Eastern Time (US & Canada)'
+    config.action_cable.mount_path = '/cable'
 
 
 
