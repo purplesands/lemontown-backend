@@ -11,9 +11,8 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local   = false
   config.action_controller.perform_caching = true
-  config.action_cable.url = "http://localhost:3000/cable"
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
@@ -35,8 +34,8 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
-  config.action_cable.url = "ws://#{ENV['RAILS_HOST']}/cable"
-  config.action_cable.allowed_request_origins = ["https://#{ENV['RAILS_HOST']}", "http://#{ENV['RAILS_HOST']}"]
+  config.action_cable.url = "ws://lemon-town-api.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ["https://lemon-town-api.herokuapp.com", "http://lemon-town-api.herokuapp.com", "http://localhost:3000", "https://localhost:3000""]
 
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
