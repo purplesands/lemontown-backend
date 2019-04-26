@@ -1,4 +1,8 @@
 Rails.application.configure do
+
+  config.action_cable.url = "ws://#{ENV['RAILS_HOST']}/cable"
+  config.action_cable.allowed_request_origins = ['http://localhost:3000','https://localhost:3000', "http://#{ENV['RAILS_HOST']}","https://#{ENV['RAILS_HOST']}"]
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -10,7 +14,7 @@ Rails.application.configure do
   config.eager_load = false
 
   # Show full error reports.
-  config.consider_all_requests_local = true
+  config.consider_all_requests_local = false
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
@@ -46,8 +50,6 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
-  config.action_cable.url = "ws://#{ENV['RAILS_HOST']}/cable"
-  config.action_cable.allowed_request_origins = ["https://#{ENV['RAILS_HOST']}", "http://#{ENV['RAILS_HOST']}"]
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
