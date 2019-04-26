@@ -1,7 +1,5 @@
 development:
-  adapter: redis
-  url: <%= ENV['REDIS_URL'] %>
-  channel_prefix: zone-backend_development
+  adapter: async
 
 test:
   adapter: async
@@ -9,4 +7,3 @@ test:
 production:
   adapter: redis
   url: <%= ENV['REDIS_URL'] %>
-  channel_prefix: zone-backend_production
