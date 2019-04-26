@@ -1,7 +1,6 @@
 class AuthController < ApplicationController
   def login
     @user = User.find_by(username: params[:username])
-    puts "hi" @user
     if @user && @user.authenticate(params[:password])
       # prove that the user exists in our database
       # -> lets send them a token!
