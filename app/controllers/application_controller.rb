@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::API
   def encode_token(payload)
-    JWT.encode(payload, ENV['KEY'])
+    JWT.encode(payload, <%= Rails.application.credentials.jw %>)
   end
 
   def decode_token
     begin
-      JWT.decode(auth_headers, ENV['KEY'])
+      JWT.decode(auth_headers, <%= Rails.application.credentials.jw %>)
     rescue
       nil
     end
