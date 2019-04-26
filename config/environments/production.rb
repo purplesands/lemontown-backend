@@ -37,7 +37,7 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
 
   config.action_cable.url = 'ws://localhost:3000/cable'
-  config.action_cable.allowed_request_origins = ['https://localhost:3000', 'http://localhost:3000']
+  config.action_cable.allowed_request_origins = 'https://lemon-town-api.herokuapp.com'
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
