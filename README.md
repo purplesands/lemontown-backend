@@ -1,24 +1,7 @@
-# README
+# Lemontown
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+fun friendly community for chatting, reflecting, and creating
 
-Things you may want to cover:
+Find a stable build of Lemontown hosted [here](https://lemon-town.herokuapp.com).
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For installation instructions, see the frontend repository [here](https://github.com/purplesands/lemontown-frontend).

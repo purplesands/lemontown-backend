@@ -1,11 +1,13 @@
 class ApplicationController < ActionController::API
   def encode_token(payload)
     JWT.encode(payload, Rails.application.credentials.jwt )
+    # JWT.encode(payload, 'not_secure')
   end
 
   def decode_token
     begin
       JWT.decode(auth_headers, Rails.application.credentials.jwt)
+      # JWT.decode(auth_headers, 'not_secure')
     rescue
       nil
     end
