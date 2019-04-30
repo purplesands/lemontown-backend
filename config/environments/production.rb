@@ -34,8 +34,8 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
-  config.action_cable.url = "wss://lemon-town-api.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ["https://lemon-town-api.herokuapp.com", "http://lemon-town-api.herokuapp.com", "http://localhost:3000", "https://localhost:3000", "https://lemon-town.herokuapp.com", "http://lemon-town.herokuapp.com"]
+  config.action_cable.url = "#{$url}/cable"
+  config.action_cable.allowed_request_origins = ['http://localhost:3001','https://localhost:3001',"https://lemon-town-api.herokuapp.com", "http://lemon-town-api.herokuapp.com", "http://localhost:3000", "https://localhost:3000", "https://lemon-town.herokuapp.com", "http://lemon-town.herokuapp.com"]
 
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
