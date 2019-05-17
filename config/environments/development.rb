@@ -1,7 +1,7 @@
 Rails.application.configure do
 
   config.action_cable.url = "#{$url}/cable"
-  config.action_cable.allowed_request_origins = ['http://localhost:3001', 'https://localhost:3001', 'http://localhost:3000','https://localhost:3000', "http://#{ENV['RAILS_HOST']}","https://#{ENV['RAILS_HOST']}"]
+  config.action_cable.allowed_request_origins = ['http://localhost:3001', 'https://localhost:3001', 'http://localhost:3000','https://localhost:3000', "http://#{ENV['RAILS_HOST']}","https://#{ENV['RAILS_HOST']}", "http://lemon-town.herokuapp.com", "https://lemon-town.herokuapp.com", "https://lemon-town-api.herokuapp.com", "http://lemon-town-api.herokuapp.com"]
 
   # Settings specified here will take precedence over those in config/application.rb.
 
