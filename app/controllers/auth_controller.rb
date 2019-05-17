@@ -8,7 +8,7 @@ class AuthController < ApplicationController
       jwt = encode_token({user_id: @user.id})
       render json: {user: UserSerializer.new(@user), jwt: jwt}
     else
-      render json: {errors: "Please enter the correct username and password!"}
+      render json: {errors: "username or password incorrect!"}
     end
   end
 
@@ -18,7 +18,7 @@ class AuthController < ApplicationController
     if @user
       render json: @user
     else
-      render json: {errors: "I dont think so"}
+      render json: {errors: "please log in"}
     end
   end
 end
